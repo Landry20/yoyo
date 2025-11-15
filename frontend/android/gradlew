@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# For Cygwin or MSYS, switch paths to Windows format before running java
+if [ "$OS" = "Windows_NT" ]; then
+    cygwin=false
+    darwin=false
+    msys=false
+    if [ "$(uname -o | grep -i cygwin)" ]; then
+        cygwin=true
+    elif [ "$(uname -o | grep -i msys)" ]; then
+        msys=true
+    fi
+fi
+
+APP_NAME="Gradle"
+APP_BASE_NAME=`basename "$0"`
+
+GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+
+exec "$JAVACMD" "$@"
+

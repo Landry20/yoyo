@@ -1,0 +1,3 @@
+// Minimal project.pbxproj - will need proper configuration in Xcode
+// This is a placeholder - React Native CLI will generate proper project
+

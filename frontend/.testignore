@@ -1,0 +1,9 @@
+# Fichiers et dossiers à exclure des tests
+node_modules/
+android/
+ios/
+__tests__/
+*.snap
+coverage/
+.nyc_output/
+
